@@ -1,20 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CISW 300 ARC Professor Hayes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CISW 300 coursework, projects, and helpful HTML resources.">
+  <title>CISW 300 American River College</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b62ef'/%3E%3Ctext x='8' y='43' fill='white' font-size='34' font-family='monospace'%3E%26lt;%26gt;%3C/text%3E%3C/svg%3E">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #eef1f6; color: #18233b; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+    a { color: #214fc6; text-underline-offset: 4px; }
+    a:hover { color: #102c7a; }
+    a:focus-visible { outline: 3px solid #2260ee; outline-offset: 5px; }
+    .masthead { width: 80%; margin: 30px auto 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-weight: 800; font-size: 19px; letter-spacing: -.5px; }
+    .brand span { color: #2b62ef; margin-right: 10px; }
+    .course { font-size: 14px; color: #5b6476; }
+    /* The main layout is an actual table, centered at 80% width. */
+    .layout { width: 80%; margin: 0 auto 40px; border-collapse: collapse; table-layout: fixed; background: white; box-shadow: 0 16px 60px #18233b0a; }
+    .sidebar-column { width: 24%; }
+    td { padding: 0; vertical-align: top; }
+    .hero { position: relative; overflow: hidden; background: #111d39; color: white; min-height: 330px; }
+    .banner { width: 100%; height: 360px; display: block; object-fit: cover; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #08132df2, #08132d99 50%, #08132d11); }
+    .hero-copy { position: absolute; z-index: 1; inset: 0; padding: 45px 48px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    .eyebrow { margin: 0 0 14px; color: #b9cbff; font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; }
+    h1 { font-size: clamp(32px, 4.4vw, 64px); line-height: 1.06; letter-spacing: -2px; margin: 0 0 18px; }
+    .intro { font-size: 16px; color: #d7dff0; margin: 0; max-width: 370px; }
+    .sidebar { padding: 34px 25px; border-right: 1px solid #e8ecf3; }
+    .sidebar h2 { font-size: 18px; line-height: 1.35; margin: 0 0 22px; }
+    .sidebar ul { list-style: none; padding: 0; margin: 0; }
+    .sidebar li { margin-bottom: 17px; }
+    .sidebar a { font-size: 15px; text-decoration: none; display: inline-block; }
+    .sidebar a:hover { text-decoration: underline; }
+    .side-note { border-top: 1px solid #e8ecf3; margin-top: 30px; padding-top: 22px; color: #687287; font-size: 14px; }
+    .work-title { padding: 30px 30px 5px; }
+    .work-title h2 { margin: 0; font-size: 24px; letter-spacing: -.7px; }
+    .work-title p { color: #687287; margin: 3px 0 0; font-size: 14px; }
+    .tile { padding: 24px 15px 12px 30px; }
+    .tile.right { padding-left: 15px; padding-right: 30px; }
+    .tile.bottom { padding-top: 15px; padding-bottom: 32px; }
+    figure { margin: 0; }
+    .art { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: #e8edf6; border-radius: 5px; }
+    figcaption { padding: 14px 0 5px; }
+    .number { font-size: 12px; letter-spacing: 1px; color: #687287; font-weight: 700; }
+    h3 { margin: 2px 0 2px; font-size: 21px; letter-spacing: -.5px; }
+    figcaption p { margin: 0; font-size: 14px; color: #687287; }
+    footer { padding: 22px 30px; background: #111d39; color: #d0d9ed; display: flex; gap: 14px; align-items: center; justify-content: space-between; font-size: 14px; }
+    footer a { color: #d0d9ed; }
+    footer a:hover { color: white; }
+    @media (max-width: 750px) {
+      .masthead { align-items: flex-start; flex-direction: column; gap: 0; }
+      .banner { height: 340px; }
+      .hero-copy { padding: 28px; }
+      h1 { letter-spacing: -1px; }
+      .layout, .layout tbody, .layout tr, .layout td { display: block; }
+      .layout colgroup { display: none; }
+      .sidebar { border-right: 0; border-bottom: 1px solid #e8ecf3; padding: 25px; }
+      .sidebar ul { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+      .sidebar li { margin: 0; }
+      .side-note { margin-top: 20px; padding-top: 15px; }
+      .work-title { padding: 25px 25px 0; }
+      .tile, .tile.right, .tile.bottom { padding: 22px 25px; }
+      footer { flex-direction: column; align-items: flex-start; padding: 22px 25px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
 </head>
-<body style="background-color: aliceblue">
-    <h1 align="center">CISC 310 Introduction to Computer Science</h1>
-    <h2>Professor Hayes</h2>
-    <p><strong>Here is a photo</strong></p>
-    <img src="Tutorial banner.png" alt="Banner for CISW 300" width="851" height="315" style="display: block; max-width: 100%; height: auto; margin: 0 auto;">
-    <h3>Book</h3>
-    <p>HTML5+CSS3, Comprehensive, Carey (8th Edition)</p>
-    <h3>Projects</h3>
-    <p><a href="book.html">Tutorials</a></p>
-    <p><a href="tutorial1/ct_start.html">Tutorial 1</a></p>
-    <p><a href="tutorial2/tss_home.html">Tutorial 2</a></p>
+<body id="top">
+  <header class="masthead">
+
+    <div class="course">CISW 300 · American River College</div>
+  </header>
+  <main>
+    <!-- This table uses rowspan and colspan to organize the homepage. -->
+    <table class="layout" role="presentation">
+      <colgroup><col class="sidebar-column"><col><col></colgroup>
+      <tbody>
+        <tr><td colspan="3">
+          <section class="hero" aria-labelledby="page-title">
+            <img class="banner" src="images/banner.png" alt="" width="2172" height="724">
+            <div class="hero-copy">
+              <p class="eyebrow">Learning. Creating. Building.</p>
+              <h1 id="page-title">One page.<br>Endless possibilities.</h1>
+              <p class="intro">Welcome to my CISW 300 workspace.<br>A home for my journey in web development.</p>
+            </div>
+          </section>
+        </td></tr>
+        <tr>
+          <td class="sidebar" rowspan="3">
+            <nav aria-labelledby="resources-title">
+              <h2 id="resources-title">Helpful HTML<br>pages</h2>
+              <ul>
+                <li><a href="book.html">Book tutorials</a></li>
+                <li><a href="tutorial1/ct_start.html">Tutorial 1</a></li>
+                <li><a href="tutorial2/tss_home.html">Tutorial 2</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content">HTML fundamentals</a></li>
+                <li><a href="https://www.w3schools.com/html/">HTML tutorials</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">HTML tag reference</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS reference</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>
+                <li><a href="https://www.canva.com/">Canva image tools</a></li>
+              </ul>
+            </nav>
+            <p class="side-note">Professor Hayes<br>CISW 300<br>American River College</p>
+          </td>
+          <td class="work-title" colspan="2"><h2>My coursework</h2><p>From the first tag to the final project.</p></td>
+        </tr>
+        <tr>
+          <td class="tile"><figure><a href="book.html"><img class="art" src="images/book.png" alt="Explore book tutorials" width="800" height="800"></a><figcaption><span class="number">01 / LEARN</span><h3><a href="book.html">Book</a></h3><p>HTML5 + CSS3, Carey · 8th Edition</p></figcaption></figure></td>
+          <td class="tile right"><figure><img class="art" src="images/projects.png" alt="Orange modular building blocks" width="800" height="800"><figcaption><span class="number">02 / PRACTICE</span><h3>Projects</h3><p>Ideas put into practice.</p></figcaption></figure></td>
+        </tr>
+        <tr>
+          <td class="tile bottom"><figure><img class="art" src="images/portfolio.png" alt="A teal collection of portfolio sheets" width="800" height="800"><figcaption><span class="number">03 / COLLECT</span><h3>Portfolio</h3><p>A collection of my work.</p></figcaption></figure></td>
+          <td class="tile right bottom"><figure><img class="art" src="images/final.png" alt="A metallic star sculpture in violet light" width="800" height="800"><figcaption><span class="number">04 / CREATE</span><h3>Final</h3><p>Bringing it all together.</p></figcaption></figure></td>
+        </tr>
+        <tr><td colspan="3"><footer><span>Ammar Shahab · CISW 300</span><span>Made with curiosity &amp; HTML.</span><a href="#top">Back to top ↑</a></footer></td></tr>
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>
+
