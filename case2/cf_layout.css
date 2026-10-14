@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+html {
+	height: 100%;
+	font-size: 12px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+body {
+	margin: 0px auto;
+	width: 1200px;
+	min-height: 100%;
+}
+
+body > header > img {
+	display: block;
+	width: 100%;
+}
+
+body > header > nav.horizontal li {
+	display: block;
+	float: left;
+	position: relative;
+	width: 14.2857%;
+}
+
+body > header > nav.horizontal li a {
+	background-color: rgb(25, 28, 59);
+	color: rgb(210, 199, 255);
+	display: block;
+	height: 3em;
+	line-height: 3em;
+	font-size: 1.2em;
+	letter-spacing: 0.15em;
+	text-align: center;
+	width: 100%;
+}
+
+body > header > nav.horizontal li:nth-of-type(7) {
+	width: 7.1428%;
+}
+
+body > header > nav.horizontal li:nth-of-type(8) {
+	width: 7.1428%;
+}
+
+body > header > nav.horizontal li a img {
+	display: block;
+	margin: auto;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 60%;
+}
+
+section#left {
+	clear: both;
+	float: left;
+	margin-top: 20px;
+	width: 240px;
+}
+
+section#center {
+	float: left;
+	width: 720px;
+}
+
+section#right {
+	float: left;
+	margin-top: 20px;
+	width: 240px;
+}
+
+div#cube_top span {
+	color: rgba(79, 228, 225, 1);
+}
+
+div#cube_top p {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	padding: 10px;
+	text-align: center;
+}
+
+div#cube_bottom h1 {
+	position: absolute;
+	bottom: 0px;
+	font-size: 3.5em;
+	font-weight: normal;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+div.cube_face img {
+	display: block;
+	width: 100%;
+}
+
+div#cube_top {
+	background-color: rgba(55, 56, 152, 0.96);
+	color: white;
+}
+
+div#cube_bottom {
+	background-color: rgba(65, 34, 115, 0.96);
+	color: rgb(210, 199, 255);
+}
+
+section aside {
+	background-color: rgba(25, 27, 57, 0.95);
+	margin: 20px auto 0px auto;
+	width: 80%;
+}
+
+section aside h1 {
+	background-color: rgba(73, 43, 126, 0.98);
+	color: rgb(210, 199, 255);
+	font-size: 1.5em;
+	font-weight: normal;
+	text-align: center;
+}
+
+section aside p {
+	font-size: 1.2em;
+	line-height: 1.2;
+	margin: 10px;
+}
+
+footer {
+	background-color: rgba(14, 16, 43, 0.98);
+	clear: left;
+	margin-top: 55px;
+	text-align: center;
+}
+
+footer, footer span  a {
+   padding: 10px;
+   color: rgb(206, 210, 239);
+}
+
+footer span a:hover {
+   color: rgb(79, 228, 225);
+   text-decoration: underline;
+}
+
+html { font-size: 16px; }
+body { width: min(1200px, 96%); color: #e2e5fc; line-height: 1.55; }
+body > header > img { height: auto; }
+body > header > nav.horizontal li a { font-size: 0.875rem; letter-spacing: 0.4px; color: #e6ddff; }
+body > header > nav.horizontal li a:hover { background-color: #5732a3; }
+body > header > nav.horizontal li a:focus-visible { outline: 3px solid #4fe4e1; outline-offset: -3px; }
+body > header > nav.horizontal li a img { width: 34px; height: 34px; }
+section#left, section#right { width: 20%; }
+section#center { width: 60%; }
+section aside { width: 94%; }
+section aside h1 { font-size: 1.05rem; line-height: 1.35; padding: 14px 10px; color: #f0e9ff; }
+section aside p { font-size: 0.9375rem; line-height: 1.6; margin: 14px; }
+section aside a { color: #6eeee8; text-underline-offset: 3px; }
+section aside a:hover { color: white; }
+section aside a:focus-visible, footer a:focus-visible { outline: 3px solid #4fe4e1; outline-offset: 3px; }
+div#cube_top p { font-size: 1.0625rem; line-height: 1.5; padding: 28px; }
+div#cube_bottom h1 { font-size: 3rem; line-height: 1.1; width: 100%; padding: 20px; }
+div.cube_face img { height: 100%; object-fit: cover; }
+footer { font-size: 0.875rem; line-height: 1.7; padding: 20px; }
+footer span { display: block; }
+[id] { scroll-margin-top: 18px; }
+@media (max-width: 1000px) {
+  body { display: grid; grid-template-areas: 'header' 'center' 'left' 'right' 'footer'; width: 96%; }
+  body > header { grid-area: header; }
+  section#center { grid-area: center; }
+  section#left { grid-area: left; }
+  section#right { grid-area: right; }
+  footer { grid-area: footer; margin-top: 24px; }
+  section#left, section#center, section#right { float: none; width: 100%; margin-top: 0; }
+  section#left aside, section#right aside { transform: none; max-width: 700px; }
+}
+@media (max-width: 600px) {
+  body > header > nav.horizontal ul { display: grid; grid-template-columns: repeat(4, 1fr); }
+  body > header > nav.horizontal li, body > header > nav.horizontal li:nth-of-type(7), body > header > nav.horizontal li:nth-of-type(8) { width: auto; float: none; }
+  body > header > nav.horizontal li a { font-size: 0.75rem; }
+  div#cube_top p { font-size: 0.875rem; line-height: 1.35; padding: 12px; }
+  div#cube_bottom h1 { font-size: 1.9rem; padding: 10px; }
+}

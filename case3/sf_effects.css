@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+body {
+   box-shadow: 10px 0px 50px rgb(27, 45, 58),  -10px 0px 50px rgb(27, 45, 58);
+}
+
+body > header nav.tabs {
+   background: url(sf_back1.png) no-repeat;
+   background-position: center center;
+   background-size: cover;
+}
+
+body > header nav.tabs li {
+   transform: perspective(50px) rotateX(20deg);
+}
+
+body > header nav.tabs li:hover {
+   background-color: rgb(249, 252, 253);
+}
+
+section#left nav.vertical {
+   border: 1px solid rgb(28, 98, 128);
+   border-radius: 25px;
+}
+
+section#left nav.vertical h1 {
+   border-radius: 25px 25px 0px 0px;
+}
+
+section#center article {
+   background: radial-gradient(#ffffff 30%, #ddeaf0);
+   border: 1px solid rgb(56, 83, 100);
+   border-radius: 22px;
+   box-shadow: 10px 10px 20px rgb(27, 45, 58);
+}
+
+blockquote {
+   background: url(sf_speech.png) no-repeat;
+   background-size: 100% 100%;
+   filter: drop-shadow(5px 5px 10px rgb(27, 45, 58));
+}
+
+cite img {
+   border-radius: 50%;
+}
+
+@media (max-width: 760px) {
+   body > header nav.tabs li {
+      transform: none;
+   }
+}

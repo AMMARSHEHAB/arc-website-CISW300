@@ -1,0 +1,19 @@
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #eef1f7; color: #17213a; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+main { width: min(920px, 90%); margin: 80px auto; }
+.eyebrow { color: #59667e; font-size: 0.875rem; letter-spacing: 1px; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin: 12px 0 36px; letter-spacing: -1.5px; }
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.project { display: block; padding: 32px; border-radius: 14px; text-decoration: none; color: inherit; border-top: 6px solid; box-shadow: 0 12px 36px #17213a0b; }
+.pizza { background: #fff9f1; border-color: #a02d21; }
+.gaming { background: #141631; color: #e2e5fc; border-color: #9b73ef; }
+.case { font-size: 0.8125rem; font-weight: bold; letter-spacing: 2px; }
+h2 { font-size: 1.7rem; line-height: 1.2; margin: 18px 0 12px; }
+.project p { margin: 0; font-size: 1rem; }
+.open { display: block; margin-top: 28px; font-weight: bold; }
+.project:hover .open { text-decoration: underline; text-underline-offset: 4px; }
+.project:focus-visible { outline: 3px solid #286dd9; outline-offset: 5px; }
+@media (max-width: 650px) { main { margin: 40px auto; } .projects { grid-template-columns: 1fr; } }
+
+.pancakes { grid-column: 1 / -1; background: #f4fafc; border-color: #1c6280; }
